@@ -7,15 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CelsiusToFahrenheit.h"
-#import "FahrenheitToCelsius.h"
+#import "TemperatureConverter.h"
 
 @interface ViewController : UIViewController
 
 @property (nonatomic,weak) IBOutlet UILabel *currentTemperatureLabel;
 @property (nonatomic,weak) IBOutlet UISlider *currentTemperatureSlider;
 @property (nonatomic,weak) IBOutlet UISegmentedControl *segmentedControl;
-
 
 @end
 

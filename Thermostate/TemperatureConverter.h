@@ -1,5 +1,5 @@
 //
-//  FahrenheitToCelsius.h
+//  TemperatureConverter.h
 //  Thermostate
 //
 //  Created by Hayden Goldman on 2/6/17.
@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FahrenheitToCelsius : NSObject
+@interface TemperatureConverter : NSObject
 
--(int) fahrenheitToCelsius:(int)f;
+-(float) fahrenheitToCelsius:(float)f;
+-(float) celsiusToFahrenheit:(float)c;
 
 @end

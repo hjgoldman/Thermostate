@@ -20,48 +20,44 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-
-- (IBAction)segmentSwitch:(id)sender {
+- (IBAction)segmentSwitch:(id)sender{
     
-    CelsiusToFahrenheit *celciusToFahrenheit = [[CelsiusToFahrenheit alloc]init];
-    int fahrenheit = [celciusToFahrenheit celsiusToFahrenheit:(int)self.currentTemperatureSlider.value];
+    TemperatureConverter *temperatureConverter = [[TemperatureConverter alloc]init];
     
-    FahrenheitToCelsius *fahrenheitToCelsius = [[FahrenheitToCelsius alloc]init];
-    int celsius = [fahrenheitToCelsius fahrenheitToCelsius: (int)self.currentTemperatureSlider.value];
+    float fahrenheit = [temperatureConverter celsiusToFahrenheit:(float)self.currentTemperatureSlider.value];
+    float celsius = [temperatureConverter fahrenheitToCelsius:(float)self.currentTemperatureSlider.value];
     
-    if (segmentedControl.selectedSegmentIndex == 0) {
-        
+    if (segmentedControl.selectedSegmentIndex == 0){
         self.currentTemperatureSlider.value = fahrenheit;
-        self.currentTemperatureLabel.text = [NSString stringWithFormat: @"%d °F", (int)self.currentTemperatureSlider.value];
-
+        self.currentTemperatureLabel.text = [NSString stringWithFormat: @"%.0f °F", (float)self.currentTemperatureSlider.value];
     } else {
-        
         self.currentTemperatureSlider.value = celsius;
-        self.currentTemperatureLabel.text = [NSString stringWithFormat: @"%d °C", (int)self.currentTemperatureSlider.value];
-        
+        self.currentTemperatureLabel.text = [NSString stringWithFormat: @"%.0f °C", (float)self.currentTemperatureSlider.value];
     }
-
 }
-
-
 
 -(IBAction) temperatureSlider:(id)sender{
     
-    int temperature = self.currentTemperatureSlider.value;
+    float temperature = self.currentTemperatureSlider.value;
     
-    self.currentTemperatureLabel.text = [NSString stringWithFormat:@"%d", temperature];
-
+    if (segmentedControl.selectedSegmentIndex == 0){
+        self.currentTemperatureLabel.text = [NSString stringWithFormat:@"%.0f °F", temperature];
+    } else {
+        self.currentTemperatureLabel.text = [NSString stringWithFormat:@"%.0f °C", temperature];
+    }
+    
+    //Changes the background color when the value is set above or below a certain temperature
+    if (self.currentTemperatureSlider.value > 90 && segmentedControl.selectedSegmentIndex == 0){
+        self.view.backgroundColor = [UIColor redColor];
+    } else if (self.currentTemperatureSlider.value < 20 && segmentedControl.selectedSegmentIndex == 0){
+        self.view.backgroundColor = [UIColor blueColor];
+    } else if (self.currentTemperatureSlider.value > 32 && segmentedControl.selectedSegmentIndex == 1){
+        self.view.backgroundColor = [UIColor redColor];
+    } else if (self.currentTemperatureSlider.value < -6 && segmentedControl.selectedSegmentIndex == 1){
+        self.view.backgroundColor = [UIColor blueColor];
+    } else {
+        self.view.backgroundColor = [UIColor whiteColor];
+    }
 }
-
-//        if (self.currentTemperatureSlider.value > 90){
-//            self.view.backgroundColor = [UIColor redColor];
-//        } else if (self.currentTemperatureSlider.value <20){
-//            self.view.backgroundColor = [UIColor blueColor];
-//        } else {
-//            self.view.backgroundColor = [UIColor whiteColor];
-//        }
-
-
 
 @end

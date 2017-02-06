@@ -13,8 +13,7 @@
 		3A5FAB861E48E5F9005B5758 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5FAB841E48E5F9005B5758 /* Main.storyboard */; };
 		3A5FAB881E48E5F9005B5758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A5FAB871E48E5F9005B5758 /* Assets.xcassets */; };
 		3A5FAB8B1E48E5F9005B5758 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5FAB891E48E5F9005B5758 /* LaunchScreen.storyboard */; };
-		3A5FAB971E48FC5B005B5758 /* CelsiusToFahrenheit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FAB961E48FC5B005B5758 /* CelsiusToFahrenheit.m */; };
-		3A5FAB9A1E48FC72005B5758 /* FahrenheitToCelsius.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FAB991E48FC72005B5758 /* FahrenheitToCelsius.m */; };
+		3A5FAB9D1E490C31005B5758 /* TemperatureConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FAB9C1E490C31005B5758 /* TemperatureConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +27,8 @@
 		3A5FAB871E48E5F9005B5758 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A5FAB8A1E48E5F9005B5758 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A5FAB8C1E48E5F9005B5758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A5FAB951E48FC5B005B5758 /* CelsiusToFahrenheit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelsiusToFahrenheit.h; sourceTree = "<group>"; };
-		3A5FAB961E48FC5B005B5758 /* CelsiusToFahrenheit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CelsiusToFahrenheit.m; sourceTree = "<group>"; };
-		3A5FAB981E48FC72005B5758 /* FahrenheitToCelsius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FahrenheitToCelsius.h; sourceTree = "<group>"; };
-		3A5FAB991E48FC72005B5758 /* FahrenheitToCelsius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FahrenheitToCelsius.m; sourceTree = "<group>"; };
+		3A5FAB9B1E490C31005B5758 /* TemperatureConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureConverter.h; sourceTree = "<group>"; };
+		3A5FAB9C1E490C31005B5758 /* TemperatureConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +70,8 @@
 				3A5FAB891E48E5F9005B5758 /* LaunchScreen.storyboard */,
 				3A5FAB8C1E48E5F9005B5758 /* Info.plist */,
 				3A5FAB7B1E48E5F9005B5758 /* Supporting Files */,
-				3A5FAB951E48FC5B005B5758 /* CelsiusToFahrenheit.h */,
-				3A5FAB961E48FC5B005B5758 /* CelsiusToFahrenheit.m */,
-				3A5FAB981E48FC72005B5758 /* FahrenheitToCelsius.h */,
-				3A5FAB991E48FC72005B5758 /* FahrenheitToCelsius.m */,
+				3A5FAB9B1E490C31005B5758 /* TemperatureConverter.h */,
+				3A5FAB9C1E490C31005B5758 /* TemperatureConverter.m */,
 			);
 			path = Thermostate;
 			sourceTree = "<group>";
@@ -162,10 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A5FAB831E48E5F9005B5758 /* ViewController.m in Sources */,
-				3A5FAB971E48FC5B005B5758 /* CelsiusToFahrenheit.m in Sources */,
-				3A5FAB9A1E48FC72005B5758 /* FahrenheitToCelsius.m in Sources */,
 				3A5FAB801E48E5F9005B5758 /* AppDelegate.m in Sources */,
 				3A5FAB7D1E48E5F9005B5758 /* main.m in Sources */,
+				3A5FAB9D1E490C31005B5758 /* TemperatureConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
